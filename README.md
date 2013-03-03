@@ -10,7 +10,12 @@
   sudo apt-get -y install git
   ```
 
-3. **Paste Installer Script in ```www``` Folder**
+3. **Create ```www``` directory** (if it does not exist)
+  ```bash
+  mkdir /var/www
+```
+
+4. **Paste Installer Script in ```www``` Folder**
   ```bash
   git clone git@github.com:Laborate/base-init.git
   sudo bash base-init/init.sh
