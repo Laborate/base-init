@@ -1,4 +1,19 @@
-initialize-production-server
-============================
+**Create SSH Keys And Add To Github**
+```bash
+cd ~/.ssh
+ssh-keygen -t rsa -C "your_email@example.com"
+cat ~/.ssh/id_rsa.pub
+```
 
-Will take a fresh out of the box server and download/install all the dependencies needed for the other repos to function properly
+**Install Git**
+```bash
+sudo apt-get -y install git
+```
+
+
+**Paste Installer Script in ```www``` Folder**
+```bash
+git clone git@github.com:Laborate/initialize-production-server.git
+sudo bash initialize-production-server/init/init.sh
+sudo rm -r initialize-production-server/
+```
