@@ -10,7 +10,7 @@
   sudo apt-get -y install git
   ```
 
-3. **Create ```www``` directory** (if it does not exist)
+3. **Create ```www``` directory**
   ```bash
   mkdir /var/www
 ```
