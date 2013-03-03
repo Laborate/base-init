@@ -13,7 +13,7 @@ sudo apt-get -y install git
 
 **Paste Installer Script in ```www``` Folder**
 ```bash
-git clone git@github.com:Laborate/initialize-production-server.git
-sudo bash initialize-production-server/init/init.sh
-sudo rm -r initialize-production-server/
+git clone git@github.com:Laborate/base-init.git
+sudo bash base-init/init/init.sh
+sudo rm -r base-init
 ```
