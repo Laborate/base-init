@@ -25,7 +25,7 @@ echo -e '\033[32mApache2 Install Complete\033[m'
 echo -e '\033[32mInstalling Apache2 Modules\033[m'
 apt-get -y install libapache2-mod-auth-plain
 apt-get -y install libapache2-mod-proxy-html
-apt-get -y install libapache2-mod-php5filter
+apt-get -y install libapache2-mod-php5
 apt-get -y install libapache2-mod-uwsgi
 apt-get -y install libapache2-mod-vhost-hash-alias
 apt-get -y install libapache2-webauth
