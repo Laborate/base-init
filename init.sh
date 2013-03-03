@@ -89,5 +89,6 @@ git config --global core.editor "vim"
 export VISUAL=vim
 export EDITOR=vim
 echo -e '\033[32mConfigured User Preferences \033[m'
+rm -r $BASE/base-init
 cd $BASE
 exit
