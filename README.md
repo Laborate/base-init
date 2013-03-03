@@ -13,6 +13,6 @@
 3. **Paste Installer Script in ```www``` Folder**
   ```bash
   git clone git@github.com:Laborate/base-init.git
-  sudo bash base-init/init/init.sh
+  sudo bash base-init/init.sh
   sudo rm -r base-init
   ```
