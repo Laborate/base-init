@@ -19,7 +19,6 @@ echo -e '\033[32mFTP Install Complete\033[m'
 #Install Apache2
 echo -e '\033[32mInstalling Apache2\033[m'
 apt-get -y install apache2
-cp $BASE/init/default /etc/apache2/sites-available/default -fr
 echo -e '\033[32mApache2 Install Complete\033[m'
 
 #Install Apache2 Modules
