@@ -1,0 +1,46 @@
+;; Domain:     laborate.io
+;; Exported:   2013-03-04 02:17:03
+;; 
+;; This file is intended for use for informational and archival 
+;; purposes ONLY and MUST be edited before use on a production 
+;; DNS server.  In particular, you must: 
+;;   -- update the SOA record with the correct authoritative name server 
+;;   -- update the SOA record with the contact e-mail address information
+;;   -- update the NS record(s) with the authoritative name servers for this domain.
+;; 
+;; For further information, please consult the BIND documentation
+;; located on the following website:
+;; 
+;; http://www.isc.org/
+;;     
+;; And RFC 1035:
+;; 
+;; http://www.ietf.org/rfc/rfc1035.txt
+;; 
+;; Please note that we do NOT offer technical support for any use
+;; of this zone data, the BIND name server, or any other third-party 
+;; DNS software.
+;; 
+;;     Use at your own risk. 
+;; 
+$ORIGIN laborate.io.
+@	3600	IN	SOA	laborate.io.	root.laborate.io.	(
+		2013030401	; serial
+		7200		; refresh
+		3600		; retry
+		86400		; expire
+		3600)		; minimum
+
+
+
+;; CNAME Records
+www.laborate.io.	300	IN	CNAME	laborate.io.
+www.dev.laborate.io.	300	IN	CNAME	dev.laborate.io.
+direct.laborate.io.	300	IN	CNAME	laborate.io.
+code.dev.laborate.io.	300	IN	CNAME	dev.laborate.io.
+
+;; A Records (IPv4 addresses)
+dev.laborate.io.	300	IN	A	192.34.57.56
+laborate.io.	300	IN	A	208.68.39.56
+
+
