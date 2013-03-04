@@ -1,5 +1,5 @@
 ;; Domain:     laborate.io
-;; Exported:   2013-03-04 11:55:57
+;; Exported:   2013-03-04 12:19:23
 ;; 
 ;; This file is intended for use for informational and archival 
 ;; purposes ONLY and MUST be edited before use on a production 
@@ -33,11 +33,17 @@ $ORIGIN laborate.io.
 
 
 
+;; TXT Records
+laborate.io.	300	IN	TXT	"google-site-verification=4g9NUq3Lq47WdtRmxG09zcJrX1P1RBxiG9of54jIhyY"
+
 ;; CNAME Records
-direct.laborate.io.	300	IN	CNAME	laborate.io.
+www.laborate.io.	300	IN	CNAME	laborate.io.
+www.dev.laborate.io.	300	IN	CNAME	dev.laborate.io.
+www.ipv6.laborate.io.	300	IN	CNAME	www.laborate.io.
+ipv6.laborate.io.	300	IN	CNAME	laborate.io.
 direct.dev.laborate.io.	300	IN	CNAME	dev.laborate.io.
-*.dev.laborate.io.	300	IN	CNAME	dev.laborate.io.
-*.laborate.io.	300	IN	CNAME	laborate.io.
+code.dev.laborate.io.	300	IN	CNAME	dev.laborate.io.
+direct.laborate.io.	300	IN	CNAME	laborate.io.
 
 ;; A Records (IPv4 addresses)
 dev.laborate.io.	300	IN	A	192.34.57.56
