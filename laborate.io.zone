@@ -1,5 +1,5 @@
 ;; Domain:     laborate.io
-;; Exported:   2013-03-04 02:17:03
+;; Exported:   2013-03-04 02:21:16
 ;; 
 ;; This file is intended for use for informational and archival 
 ;; purposes ONLY and MUST be edited before use on a production 
@@ -34,10 +34,9 @@ $ORIGIN laborate.io.
 
 
 ;; CNAME Records
-www.laborate.io.	300	IN	CNAME	laborate.io.
-www.dev.laborate.io.	300	IN	CNAME	dev.laborate.io.
 direct.laborate.io.	300	IN	CNAME	laborate.io.
-code.dev.laborate.io.	300	IN	CNAME	dev.laborate.io.
+*.dev.laborate.io.	300	IN	CNAME	dev.laborate.io.
+*.laborate.io.	300	IN	CNAME	laborate.io.
 
 ;; A Records (IPv4 addresses)
 dev.laborate.io.	300	IN	A	192.34.57.56
