@@ -19,6 +19,7 @@ echo -e '\033[32mFTP Install Complete\033[m'
 #Install Apache2
 echo -e '\033[32mInstalling Apache2\033[m'
 apt-get -y install apache2
+a2dissite default
 echo -e '\033[32mApache2 Install Complete\033[m'
 
 #Install Apache2 Modules
