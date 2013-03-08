@@ -89,6 +89,12 @@ git config --global core.editor "vim"
 export VISUAL=vim
 export EDITOR=vim
 echo -e '\033[32mConfigured User Preferences \033[m'
-/etc/init.d/apache2 stop
+
+#Clean Up
+read -p "htpasswd dev username: " username
+read -p "htpasswd dev password: " password
+htpasswd -c -b $BASE/.htpasswd $username $password
+service apache2 reload
+service apache2 restart
 rm -r $BASE/base-init
 exit
