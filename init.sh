@@ -8,6 +8,7 @@ apt-get -y upgrade
 apt-get -y install curl
 apt-get -y install libssl-dev pkg-config build-essential curl gcc g++ checkinstall
 apt-get -y install python-software-properties
+apt-get -y install software-properties-common
 echo -e '\033[32mUpdate Completed\033[m'
 
 #Install FTP
