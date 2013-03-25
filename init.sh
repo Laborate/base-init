@@ -60,6 +60,18 @@ apt-get -y install php5-dev php5-mysql php5-odbc php5-fpm libphp5-embed php5-mys
 apt-get -y install php5-mysqlnd php5-memcache php5-imap php5-geoip php5-ldap
 echo -e '\033[32mPHP Modules Install Complete \033[m'
 
+#Install Java
+echo -e '\033[32mInstalling Java \033[m'
+apt-get purge openjdk*
+rm /var/lib/dpkg/info/oracle-java7-installer*
+apt-get purge oracle-java7-installer*
+rm /etc/apt/sources.list.d/*java*
+apt-get update
+add-apt-repository ppa:webupd8team/java
+apt-get update
+apt-get install oracle-java7-installer
+echo -e '\033[32mJava Install Complete \033[m'
+
 #Install Nodes
 echo -e '\033[32mInstalling Node \033[m'
 mkdir /tmp/node-install
