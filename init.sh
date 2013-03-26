@@ -41,6 +41,7 @@ a2enmod include
 a2enmod userdir
 a2enmod deflate
 a2enmod proxy
+a2enmod proxy_http
 echo -e '\033[32mApache2 Modules Install Complete\033[m'
 
 #Install Mysql
