@@ -34,11 +34,13 @@ apt-get -y install libapache2-webauth
 apt-get -y install libapr-memcache0
 apt-get -y install libapr-memcache-dev
 apt-get -y install libapache2-mod-auth-mysql
+apt-get -y install libxml2-dev
 a2enmod rewrite
 a2enmod suexec
 a2enmod include
 a2enmod userdir
 a2enmod deflate
+a2enmod proxy
 echo -e '\033[32mApache2 Modules Install Complete\033[m'
 
 #Install Mysql
@@ -60,21 +62,6 @@ apt-get -y install php5-dev php5-mysql php5-odbc php5-fpm libphp5-embed php5-mys
 apt-get -y install php5-mysqlnd php5-memcache php5-imap php5-geoip php5-ldap
 echo -e '\033[32mPHP Modules Install Complete \033[m'
 
-#Install Java
-echo -e '\033[32mInstalling Java \033[m'
-sudo apt-get install sun-java6-jdk
-echo -e '\033[32mJava Install Complete \033[m'
-
-#Install Tomcat
-echo -e '\033[32mInstalling Tomcat \033[m'
-sudo apt-get install tomcat6
-mv $BASE/init/.bashrc ~/.bashrc
-mv $BASE/init/server.xml /etc/tomcat6/server.xml
-mv $BASE/init/tomcat-user.xml /etc/tomcat6/tomcat-users.xml
-chgrp -R tomcat6 /etc/tomcat6
-chmod -R g+w /etc/tomcat6
-echo -e '\033[32mTomcat Install Complete \033[m'
-
 #Install Nodes
 echo -e '\033[32mInstalling Node \033[m'
 mkdir /tmp/node-install
@@ -91,6 +78,12 @@ npm link mysql
 npm link mysql-queues
 npm link socket.io
 echo -e '\033[32mNode Modules Install Complete \033[m'
+
+#Install Java
+echo -e '\033[32mInstalling Java \033[m'
+apt-get update
+apt-get install openjdk-7-jre
+echo -e '\033[32mJava Install Complete \033[m'
 
 #Install Vim
 echo -e '\033[32mInstalling Vim \033[m'
