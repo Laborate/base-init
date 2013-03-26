@@ -1,0 +1,2 @@
+<role rolename="admin"/>
+<user username="tomcat" password="bjv0623" roles="admin"/>

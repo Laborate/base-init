@@ -67,14 +67,12 @@ echo -e '\033[32mJava Install Complete \033[m'
 
 #Install Tomcat
 echo -e '\033[32mInstalling Tomcat \033[m'
-wget http://apache.hoxt.com/tomcat/tomcat-6/v6.0.14/bin/apache-tomcat-6.0.14.tar.gz
-tar xvzf apache-tomcat-6.0.14.tar.gz
-mv apache-tomcat-6.0.14 /usr/local/tomcat
+sudo apt-get install tomcat6
 mv $BASE/init/.bashrc ~/.bashrc
-mv $BASE/init/tomcat /etc/init.d/tomcat
-chmod 755 /etc/init.d/tomcat
-ln -s /etc/init.d/tomcat /etc/rc1.d/K99tomcat
-ln -s /etc/init.d/tomcat /etc/rc2.d/S99tomcat
+mv $BASE/init/server.xml /etc/tomcat6/server.xml
+mv $BASE/init/tomcat-user.xml /etc/tomcat6/tomcat-users.xml
+chgrp -R tomcat6 /etc/tomcat6
+chmod -R g+w /etc/tomcat6
 echo -e '\033[32mTomcat Install Complete \033[m'
 
 #Install Nodes

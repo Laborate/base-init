@@ -97,4 +97,4 @@ fi
 #if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 #    . /etc/bash_completion
 #fi
-export JAVA_HOME=/usr/lib/jvm/java-6-sun
+JAVA_HOME=/usr/lib/jvm/java-6-sun
