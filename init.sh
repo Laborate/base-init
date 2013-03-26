@@ -62,15 +62,20 @@ echo -e '\033[32mPHP Modules Install Complete \033[m'
 
 #Install Java
 echo -e '\033[32mInstalling Java \033[m'
-apt-get purge openjdk*
-rm /var/lib/dpkg/info/oracle-java7-installer*
-apt-get purge oracle-java7-installer*
-rm /etc/apt/sources.list.d/*java*
-apt-get update
-add-apt-repository ppa:webupd8team/java
-apt-get update
-apt-get install oracle-java7-installer
+sudo apt-get install sun-java6-jdk
 echo -e '\033[32mJava Install Complete \033[m'
+
+#Install Tomcat
+echo -e '\033[32mInstalling Tomcat \033[m'
+wget http://apache.hoxt.com/tomcat/tomcat-6/v6.0.14/bin/apache-tomcat-6.0.14.tar.gz
+tar xvzf apache-tomcat-6.0.14.tar.gz
+mv apache-tomcat-6.0.14 /usr/local/tomcat
+mv $BASE/init/.bashrc ~/.bashrc
+mv $BASE/init/tomcat /etc/init.d/tomcat
+chmod 755 /etc/init.d/tomcat
+ln -s /etc/init.d/tomcat /etc/rc1.d/K99tomcat
+ln -s /etc/init.d/tomcat /etc/rc2.d/S99tomcat
+echo -e '\033[32mTomcat Install Complete \033[m'
 
 #Install Nodes
 echo -e '\033[32mInstalling Node \033[m'
