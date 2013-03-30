@@ -6,6 +6,7 @@ echo -e '\033[32mSystem Update \033[m'
 apt-get -y update
 apt-get -y upgrade
 apt-get -y install curl
+apt-get -y install inotify-tools
 apt-get -y install libssl-dev pkg-config build-essential curl gcc g++ checkinstall
 apt-get -y install python-software-properties
 apt-get -y install software-properties-common
