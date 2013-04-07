@@ -1,5 +1,5 @@
 ;; Domain:     laborate.io
-;; Exported:   2013-03-08 18:56:39
+;; Exported:   2013-04-07 03:33:49
 ;; 
 ;; This file is intended for use for informational and archival 
 ;; purposes ONLY and MUST be edited before use on a production 
@@ -25,7 +25,7 @@
 ;; 
 $ORIGIN laborate.io.
 @	3600	IN	SOA	laborate.io.	root.laborate.io.	(
-		2013030801	; serial
+		2013040701	; serial
 		7200		; refresh
 		3600		; retry
 		86400		; expire
