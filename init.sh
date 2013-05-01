@@ -119,5 +119,5 @@ chmod 700 /home/*
 htpasswd -c -b /home/.htpasswd $username $password
 service apache2 reload
 service apache2 restart
-rm -r $BASE/base-init
+rm -rf $BASE/base-init
 exit
