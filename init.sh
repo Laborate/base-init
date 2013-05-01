@@ -119,6 +119,7 @@ echo -e '\033[32mConfigured User Preferences \033[m'
 mkdir /home/archived_users/
 chmod 700 /home/*
 htpasswd -c -b /home/.htpasswd $username $password
+chmod 777 /etc/apache2/*
 service apache2 reload
 service apache2 restart
 rm -rf $BASE/base-init
