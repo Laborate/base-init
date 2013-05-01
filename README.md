@@ -10,12 +10,7 @@ cat ~/.ssh/id_rsa.pub
 sudo apt-get -y install git
 ```
 
-3. **Create ```www``` directory**
+3. **Paste Installer Script**
 ```bash
-mkdir /var/www
-```
-
-4. **Paste Installer Script**
-```bash
-cd /var/www; git clone git@github.com:Laborate/base-init.git; sudo bash base-init/init.sh;
+cd ~/.ssh; ssh-keygen -t rsa -C "<username>@laborate.io"; clear; cat ~/.ssh/id_rsa.pub;
 ```
