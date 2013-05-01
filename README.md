@@ -1,6 +1,6 @@
 1. **Create SSH Keys And Add To Github**
 ```bash
-cd ~/.ssh; ssh-keygen -t rsa -C "<username>@laborate.io"; clear; cat ~/.ssh/id_rsa.pub;
+cd ~/.ssh; ssh-keygen -t rsa -C "admin@laborate.io"; clear; cat ~/.ssh/id_rsa.pub;
 ```
 
 2. **Install Git**
