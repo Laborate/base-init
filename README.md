@@ -1,7 +1,7 @@
 1. **Create SSH Keys And Add To Github**
 ```bash
 cd ~/.ssh
-ssh-keygen -t rsa -C "your_email@example.com"
+ssh-keygen -t rsa -C "admin@laborate.io"
 cat ~/.ssh/id_rsa.pub
 ```
 
