@@ -96,8 +96,8 @@ echo -e '\033[32mNode Modules Install Complete \033[m'
 
 #Install Java
 echo -e '\033[32mInstalling Java \033[m'
-apt-get update
-apt-get install openjdk-7-jre
+apt-get -y update
+apt-get -y install openjdk-7-jre
 echo -e '\033[32mJava Install Complete \033[m'
 
 #Install Vim
