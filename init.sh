@@ -5,7 +5,7 @@ while [[ -z "$username" || -z "$password" ]]; do
     clear;
     read -p "htpasswd Root Username: " username;
     read -p "htpasswd Root ROOT Password: " password;
-    read -p "Is this information correct [y,n]: " correct;
+    read -p "Is this information correct [Y/n]: " correct;
     
     if [ "$correct" == "n" ]; then
         username=;
