@@ -1,6 +1,17 @@
 #Start Up
 BASE="$(cd "$(dirname "$0")"; pwd)/../"
 
+clear;
+read -p "htpasswd Root Username: " username;
+read -p "htpasswd Root ROOT Password: " password;
+
+while [[ -z "$username" || -z "$password" ]]; do
+    clear;
+    echo -e "\033[31mPlease Enter Username & Password\033[0m";
+    read -p "htpasswd Root Username: " username;
+    read -p "htpasswd Root ROOT Password: " password;
+done
+
 #Update APT-GET
 echo -e '\033[32mSystem Update \033[m'
 apt-get -y update
@@ -97,14 +108,14 @@ echo -e '\033[32mVim Install Complete \033[m'
 echo -e '\033[32mConfiguring User Preferences \033[m'
 git config --global color.ui auto
 git config --global core.editor "vim"
+git config --global merge.tool vimdiff
 export VISUAL=vim
 export EDITOR=vim
 echo -e '\033[32mConfigured User Preferences \033[m'
 
 #Clean Up
-read -p "htpasswd dev username: " username
-read -p "htpasswd dev password: " password
-htpasswd -c -b $BASE/.htpasswd $username $password
+mkdir /home/archived_users/
+htpasswd -c -b /home/.htpasswd $username $password
 service apache2 reload
 service apache2 restart
 rm -r $BASE/base-init
