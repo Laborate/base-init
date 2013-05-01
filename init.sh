@@ -118,7 +118,6 @@ echo -e '\033[32mConfigured User Preferences \033[m'
 #Clean Up
 mkdir /home/archived_users/
 sudo chown -R www-data:www-data /home
-
 chmod 700 /home/*
 htpasswd -c -b /home/.htpasswd $username $password
 chmod 777 /etc/apache2/*
