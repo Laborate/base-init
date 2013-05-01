@@ -1,16 +1,18 @@
 #Start Up
 BASE="$(cd "$(dirname "$0")"; pwd)/../"
 
-clear;
-read -p "htpasswd Root Username: " username;
-read -p "htpasswd Root ROOT Password: " password;
-
 while [[ -z "$username" || -z "$password" ]]; do
     clear;
-    echo -e "\033[31mPlease Enter Username & Password\033[0m";
     read -p "htpasswd Root Username: " username;
     read -p "htpasswd Root ROOT Password: " password;
+    read -p "Is this information correct [y,n]: " correct;
+    
+    if [ "$correct" == "n" ]; then
+        username=;
+        password=;
+    fi
 done
+clear;
 
 #Update APT-GET
 echo -e '\033[32mSystem Update \033[m'
