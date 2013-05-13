@@ -70,9 +70,7 @@ echo -e '\033[32mConfigured User Preferences \033[m'
 
 #Clean Up
 chmod 751 /home
-chmod 777 /etc/apache2/*
 mkdir /home/archived_users/
-htpasswd -c -b /home/.htpasswd $username $password
 service apache2 stop
 rm -rf $BASE/base-init
 exit
