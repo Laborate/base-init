@@ -1,19 +1,6 @@
 #Start Up
 BASE="$(cd "$(dirname "$0")"; pwd)/../"
 
-while [[ -z "$username" || -z "$password" ]]; do
-    clear;
-    read -p "htpasswd Root Username: " username;
-    read -p "htpasswd Root ROOT Password: " password;
-    read -p "Is this information correct [Y/n]: " correct;
-
-    if [ "$correct" == "n" ]; then
-        username=;
-        password=;
-    fi
-done
-clear;
-
 #Update APT-GET
 echo -e '\033[32mSystem Update \033[m'
 apt-get -y update
