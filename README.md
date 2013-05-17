@@ -12,5 +12,5 @@ sudo apt-get -y install git
 
 3. **Paste Installer Script**
 ```bash
-cd ~; git clone git@github.com:Laborate/base-init.git; sudo bash base-init/init.sh;
+cd ~; git clone -b node_migration git@github.com:Laborate/base-init.git; sudo bash base-init/init.sh;
 ```
