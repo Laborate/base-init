@@ -28,10 +28,10 @@ echo -e '\033[32mMysql Install Complete \033[m'
 echo -e '\033[32mInstalling Node \033[m'
 mkdir /tmp/node-install
 cd /tmp/node-install
-wget http://nodejs.org/dist/v0.8.19/node-v0.8.19.tar.gz
-tar -zxf node-v0.8.19.tar.gz
-cd node-v0.8.19
-./configure && make && checkinstall --install=yes --pkgname=nodejs --pkgversion "0.8.19" --default
+git clone https://github.com/joyent/node.git
+cd node
+git checkout v0.6.18
+./configure && make && sudo make install
 echo -e '\033[32mNode Install Complete \033[m'
 
 #Install Java
