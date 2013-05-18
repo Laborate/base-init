@@ -30,7 +30,7 @@ mkdir /tmp/node-install
 cd /tmp/node-install
 git clone https://github.com/joyent/node.git
 cd node
-git checkout v0.6.18
+git checkout v0.10.7
 ./configure && make && sudo make install
 echo -e '\033[32mNode Install Complete \033[m'
 
