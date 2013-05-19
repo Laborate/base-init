@@ -38,7 +38,6 @@ echo -e '\033[32mNode Install Complete \033[m'
 echo -e '\033[32mInstalling Node Modules \033[m'
 npm install express -g
 npm install forever -g
-npm install jquery -g
 npm install csslint -g
 npm install jslint -g
 echo -e '\033[32mNode Modules Install Complete \033[m'
