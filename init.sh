@@ -24,14 +24,13 @@ apt-get -y install mysql-server
 mysql_install_db
 echo -e '\033[32mMysql Install Complete \033[m'
 
+echo -e '\033[32mInstalling Redis \033[m'
+apt-get -y redis-server
+echo -e '\033[32mRedis Install Complete \033[m'
+
 #Install Nodes
 echo -e '\033[32mInstalling Node \033[m'
-mkdir /tmp/node-install
-cd /tmp/node-install
-git clone https://github.com/joyent/node.git
-cd node
-git checkout v0.10.7
-./configure && make && sudo make install
+apt-get -y nodejs
 echo -e '\033[32mNode Install Complete \033[m'
 
 #Install Nodes Modules
