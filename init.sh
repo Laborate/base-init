@@ -39,6 +39,7 @@ npm install express -g
 npm install forever -g
 npm install csslint -g
 npm install jslint -g
+npm install jsonlint -g
 echo -e '\033[32mNode Modules Install Complete \033[m'
 
 #Install Java
