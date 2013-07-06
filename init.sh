@@ -25,7 +25,9 @@ mysql_install_db
 echo -e '\033[32mMysql Install Complete \033[m'
 
 echo -e '\033[32mInstalling Redis \033[m'
-apt-get -y redis-server
+apt-get -y install redis-server
+cp $BASE/init/redis.conf /etc/redis/redis.conf
+redis-server /etc/redis/redis.conf
 echo -e '\033[32mRedis Install Complete \033[m'
 
 #Install Nodes
