@@ -1,5 +1,5 @@
 ;; Domain:     laborate.io
-;; Exported:   2013-04-07 03:33:49
+;; Exported:   2013-07-22 03:06:49
 ;; 
 ;; This file is intended for use for informational and archival 
 ;; purposes ONLY and MUST be edited before use on a production 
@@ -25,7 +25,7 @@
 ;; 
 $ORIGIN laborate.io.
 @	3600	IN	SOA	laborate.io.	root.laborate.io.	(
-		2013040701	; serial
+		2013072201	; serial
 		7200		; refresh
 		3600		; retry
 		86400		; expire
@@ -34,29 +34,29 @@ $ORIGIN laborate.io.
 
 
 ;; MX Records
-laborate.io.	300	IN	MX	5	aspmx4.googlemail.com.
-laborate.io.	300	IN	MX	3	alt1.aspmx.l.google.com.
-laborate.io.	300	IN	MX	1	aspmx.l.google.com.
-laborate.io.	300	IN	MX	5	aspmx3.googlemail.com.
-laborate.io.	300	IN	MX	3	alt2.aspmx.l.google.com.
 laborate.io.	300	IN	MX	5	aspmx5.googlemail.com.
+laborate.io.	300	IN	MX	1	aspmx.l.google.com.
+laborate.io.	300	IN	MX	5	aspmx4.googlemail.com.
+laborate.io.	300	IN	MX	5	aspmx3.googlemail.com.
+laborate.io.	300	IN	MX	3	alt1.aspmx.l.google.com.
 laborate.io.	300	IN	MX	5	aspmx2.googlemail.com.
+laborate.io.	300	IN	MX	3	alt2.aspmx.l.google.com.
 
 ;; TXT Records
-laborate.io.	300	IN	TXT	"google-site-verification=4g9NUq3Lq47WdtRmxG09zcJrX1P1RBxiG9of54jIhyY"
-laborate.io.	300	IN	TXT	"google-site-verification=LZ0vOBmIeMwPYenp9heTG-eWFLwLb5LYHG4zc34xcjQ"
+laborate.io.	300	IN	TXT	"google-site-verification=221h13V-oVttYLZ3Rvqe44_6kZapBUT1B9NSSp2cpfg"
 
 ;; CNAME Records
-www.ipv6.laborate.io.	300	IN	CNAME	laborate.io.
-code.dev.laborate.io.	300	IN	CNAME	dev.laborate.io.
-*.laborate.io.	300	IN	CNAME	laborate.io.
+www.laborate.io.	300	IN	CNAME	laborate.io.
+video.laborate.io.	300	IN	CNAME	ghs.googlehosted.com.
+*.dev.laborate.io.	300	IN	CNAME	dev.laborate.io.
+calender.laborate.io.	300	IN	CNAME	ghs.googlehosted.com.
 direct.laborate.io.	300	IN	CNAME	laborate.io.
+docs.laborate.io.	300	IN	CNAME	ghs.googlehosted.com.
+mail.laborate.io.	300	IN	CNAME	ghs.googlehosted.com.
 ipv6.laborate.io.	300	IN	CNAME	laborate.io.
-www.dev.laborate.io.	300	IN	CNAME	dev.laborate.io.
-resources.code.dev.laborate.io.	300	IN	CNAME	dev.laborate.io.
 
 ;; A Records (IPv4 addresses)
-dev.laborate.io.	300	IN	A	192.34.57.56
+dev.laborate.io.	300	IN	A	198.199.115.190
 laborate.io.	300	IN	A	208.68.39.56
 
 
