@@ -35,6 +35,7 @@ echo -e '\033[32mInstalling Node \033[m'
 apt-get -y nodejs
 curl https://raw.github.com/creationix/nvm/master/install.sh | sh
 nvm install v0.10.0
+nvm use v0.10.0
 echo -e '\033[32mNode Install Complete \033[m'
 
 #Install Nodes Modules
