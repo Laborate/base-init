@@ -59,6 +59,11 @@ apt-get -y remove vim-tiny
 apt-get -y install vim
 echo -e '\033[32mVim Install Complete \033[m'
 
+#Configuring System Preferences
+echo -e '\033[32mConfiguring System Preferences \033[m'
+cp $BASE/init/sshd_config /etc/ssh/sshd_config -fr
+echo -e '\033[32mConfigured System Preferences \033[m'
+
 #Configuring User Preferences
 echo -e '\033[32mConfiguring User Preferences \033[m'
 git config --global color.ui auto
