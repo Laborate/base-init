@@ -15,7 +15,12 @@ cat ~/.ssh/id_rsa.pub | ssh root@<server>.laborate.io "cat >> ~/.ssh/authorized_
 sudo apt-get -y install git
 ```
 
-4. **Paste Installer Script on Server**
+4. **Paste Installer Script on DEVELOPMENT Server**
+```bash
+cd ~; git clone -b node_migration git@github.com:Laborate/base-init.git; sudo bash base-init/init.sh dev;
+```
+
+4. **Paste Installer Script on PRODUCTION Server**
 ```bash
 cd ~; git clone -b node_migration git@github.com:Laborate/base-init.git; sudo bash base-init/init.sh;
 ```
