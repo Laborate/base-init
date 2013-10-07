@@ -59,6 +59,20 @@ apt-get -y remove vim-tiny
 apt-get -y install vim
 echo -e '\033[32mVim Install Complete \033[m'
 
+#Configure Firewall
+echo -e '\033[32mInstalling Firewall \033[m'
+apt-get -y install ufw
+ufw default deny incoming
+ufw default allow outgoing
+ufw allow ssh
+ufw allow www
+ufw allow ftp
+if [ "$1" == "dev" ]; then
+  ufw allow 3000:3010/tcp
+fi
+ufw enable
+echo -e '\033[32mFirewall Install Complete \033[m'
+
 #Configuring System Preferences
 echo -e '\033[32mConfiguring System Preferences \033[m'
 cp $BASE/init/sshd_config /etc/ssh/sshd_config -fr
@@ -77,4 +91,5 @@ echo -e '\033[32mConfigured User Preferences \033[m'
 chmod 751 /home
 mkdir /home/archived_users/
 rm -rf $BASE/base-init
+shutdown -r 0
 exit
