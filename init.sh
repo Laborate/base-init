@@ -65,12 +65,10 @@ apt-get -y install ufw
 ufw default deny incoming
 ufw default allow outgoing
 ufw allow ssh
+ufw allow ssh
 ufw allow ftp
 if [ "$1" == "dev" ]; then
-    ufw deny www
     ufw allow 3000:3010/tcp
-else
-    ufw allow ssh
 fi
 ufw enable
 echo -e '\033[32mFirewall Install Complete \033[m'
