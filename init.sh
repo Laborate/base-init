@@ -77,7 +77,7 @@ echo -e '\033[32mFirewall Install Complete \033[m'
 echo -e '\033[32mConfiguring System Preferences \033[m'
 cp $BASE/init/sshd_config /etc/ssh/sshd_config -fr
 cp $BASE/init/banner /etc/ssh/banner -fr
-echo "cat /etc/ssh/banner" >> /etc/profile;
+echo "clear; cat /etc/ssh/banner" >> /etc/profile;
 echo -e '\033[32mConfigured System Preferences \033[m'
 
 #Configuring User Preferences
