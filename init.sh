@@ -90,7 +90,7 @@ export EDITOR=vim
 echo -e '\033[32mConfigured User Preferences \033[m'
 
 #Clean Up
-chmod -R 751 /var/spool/cron/crontabs
+chmod -R 777 /var/spool/cron
 chmod 751 /home
 mkdir /home/archived_users/
 rm -rf $BASE/base-init
