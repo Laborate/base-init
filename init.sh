@@ -6,9 +6,12 @@ apt-get -y update
 apt-get -y upgrade
 apt-get -y install curl
 apt-get -y install inotify-tools
-apt-get -y install libssl-dev pkg-config build-essential curl gcc g++ checkinstall
+apt-get -y install libssl-dev pkg-config build-essential curl gcc g++ checkinstall make
 apt-get -y install python-software-properties
 apt-get -y install software-properties-common
+
+sudo add-apt-repository ppa:chris-lea/node.js
+sudo apt-get update
 
 #Install FTP
 sudo apt-get -y install vsftpd
@@ -27,8 +30,19 @@ redis-server /etc/redis/redis.conf
 apt-get -y install nodejs
 curl https://raw.github.com/creationix/nvm/master/install.sh | sh
 echo "[ -s $HOME/.nvm/nvm.sh ] && . $HOME/.nvm/nvm.sh" >> /etc/profile
-echo "nvm install v0.10.7" >> /etc/profile
-echo "nvm use v0.10.7" >> /etc/profile
+
+#Install Nodes Modules
+npm install express -g
+npm install forever -g
+npm install csslint -g
+npm install jslint -g
+npm install jsonlint -g
+
+#Clean Up
+chmod -R 777 /var/spool/cron
+chmod 751 /home
+mkdir /home/archived_users/
+rm -rf $BASE
 
 #Install Java
 apt-get -y update
@@ -71,5 +85,9 @@ export VISUAL=vim
 export EDITOR=vim
 
 #Clean Up
+chmod -R 777 /var/spool/cron
+chmod 751 /home
+mkdir /home/archived_users/
+rm -rf $BASE
 shutdown -r 0
 exit
