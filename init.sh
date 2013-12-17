@@ -23,9 +23,11 @@ apt-get -y install redis-server
 cp $BASE/redis.conf /etc/redis/redis.conf
 redis-server /etc/redis/redis.conf
 
-#Install Nodes
+#Install Node
 apt-get -y install nodejs
 curl https://raw.github.com/creationix/nvm/master/install.sh | sh
+echo "nvm install v0.10.7" >> /etc/profile
+echo "nvm use v0.10.7" >> /etc/profile
 
 #Install Java
 apt-get -y update
