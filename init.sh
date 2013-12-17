@@ -59,6 +59,16 @@ apt-get -y remove vim-tiny
 apt-get -y install vim
 echo -e '\033[32mVim Install Complete \033[m'
 
+#Install NewRelic
+echo -e '\033[32mInstalling NewRelic \033[m'
+echo deb http://apt.newrelic.com/debian/ newrelic non-free >> /etc/apt/sources.list.d/newrelic.list;
+wget -O- https://download.newrelic.com/548C16BF.gpg | apt-key add -;
+apt-get update;
+apt-get install -y newrelic-sysmond;
+nrsysmond-config --set license_key=f3e8e80f017c8862e972bc5a1d69411fe57b1f95;
+/etc/init.d/newrelic-sysmond start;
+echo -e '\033[32mNewRelic Install Complete \033[m'
+
 #Configure Firewall
 echo -e '\033[32mInstalling Firewall \033[m'
 apt-get -y install ufw
