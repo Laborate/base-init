@@ -77,9 +77,5 @@ export VISUAL=vim
 export EDITOR=vim
 
 #Clean Up
-chmod -R 777 /var/spool/cron
-chmod 751 /home
-mkdir /home/archived_users/
-rm -rf $BASE/base-init
 shutdown -r 0
 exit
