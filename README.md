@@ -26,8 +26,3 @@ sudo apt-get -y install git
       ```bash
       cd ~; git clone git@github.com:Laborate/base-init.git; sudo bash base-init/init.sh;
       ```
-
-5. **Paste Post Install Script on Server**
-```bash
-sudo bash base-init/post.sh;
-```
