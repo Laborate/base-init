@@ -1,4 +1,4 @@
-# Admin Only
+# Root Only
 
 1. **Create Local SSH Keys And Add To Github**
 ```bash
