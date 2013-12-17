@@ -1,5 +1,5 @@
 #Start Up
-BASE="$(cd "$(dirname "$0")"; pwd)/../"
+BASE="$(cd "$(dirname "$0")"; pwd)"
 
 #Update APT-GET
 apt-get -y update
@@ -12,7 +12,7 @@ apt-get -y install software-properties-common
 
 #Install FTP
 sudo apt-get -y install vsftpd
-cp $BASE/init/vsftpd.conf /etc/vsftpd.conf -fr
+cp $BASE/vsftpd.conf /etc/vsftpd.conf -fr
 
 #Install Mysql
 apt-get -y install mysql-server
@@ -20,7 +20,7 @@ mysql_install_db
 
 #Install Redis
 apt-get -y install redis-server
-cp $BASE/init/redis.conf /etc/redis/redis.conf
+cp $BASE/redis.conf /etc/redis/redis.conf
 redis-server /etc/redis/redis.conf
 
 #Install Nodes
@@ -65,8 +65,8 @@ fi
 ufw enable
 
 #Configuring System Preferences
-cp $BASE/init/sshd_config /etc/ssh/sshd_config -fr
-cp $BASE/init/banner /etc/ssh/banner -fr
+cp $BASE/sshd_config /etc/ssh/sshd_config -fr
+cp $BASE/banner /etc/ssh/banner -fr
 echo "clear; cat /etc/ssh/banner" >> /etc/profile;
 
 #Configuring User Preferences
