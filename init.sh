@@ -68,7 +68,7 @@ export VISUAL=vim
 export EDITOR=vim
 
 #SetUp Reboot Script
-echo "@reboot $BASE/post.sh" >> $BASE/postCron;
+echo "@reboot bash $BASE/post.sh" >> $BASE/postCron;
 crontab $BASE/postCron;
 
 #Clean Up
