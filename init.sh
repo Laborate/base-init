@@ -69,10 +69,6 @@ git config --global merge.tool vimdiff
 export VISUAL=vim
 export EDITOR=vim
 
-#SetUp Reboot Script
-echo "@reboot bash $BASE/post.sh" >> $BASE/postCron;
-crontab $BASE/postCron;
-
 #Clean Up
 shutdown -r 0
 exit
