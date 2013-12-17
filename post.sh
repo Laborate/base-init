@@ -21,5 +21,3 @@ chmod -R 777 /var/spool/cron
 chmod 751 /home
 mkdir /home/archived_users/
 rm -rf $BASE
-shutdown -r 0
-exit
