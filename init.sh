@@ -68,6 +68,7 @@ ufw disable
 ufw default deny incoming
 ufw default allow outgoing
 ufw allow ssh
+ufw allow OpenSSH
 ufw allow http
 ufw allow ftp
 if [ "$1" == "dev" ]; then
