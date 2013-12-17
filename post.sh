@@ -1,5 +1,6 @@
 #Start Up
 BASE="$(cd "$(dirname "$0")"; pwd)"
+[ -s $HOME/.nvm/nvm.sh ] && . $HOME/.nvm/nvm.sh
 
 #Set Node Version
 nvm install v0.10.7
