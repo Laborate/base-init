@@ -45,8 +45,10 @@ mkdir /home/archived_users/
 rm -rf $BASE
 
 #Install Java
-apt-get -y update
-apt-get -y install openjdk-7-jre
+if [ "$1" != "dev" ]; then
+    apt-get -y update
+    apt-get -y install openjdk-7-jre
+fi
 
 #Install Vim
 apt-get -y remove vim-tiny
@@ -70,6 +72,7 @@ ufw allow ftp
 if [ "$1" == "dev" ]; then
     ufw allow 3000:3010/tcp
 fi
+ufw disable
 ufw enable
 
 #Configuring System Preferences
