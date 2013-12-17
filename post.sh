@@ -1,10 +1,5 @@
 #Start Up
 BASE="$(cd "$(dirname "$0")"; pwd)"
-[ -s $HOME/.nvm/nvm.sh ] && . $HOME/.nvm/nvm.sh
-
-#Set Node Version
-nvm install v0.10.7
-nvm use v0.10.7
 
 #Install Nodes Modules
 npm install express -g
