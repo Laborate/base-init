@@ -13,8 +13,8 @@ npm install jslint -g
 npm install jsonlint -g
 
 #Remove Crontab Reboot
-touch $BASE/mycron;
-crontab $BASE/mycron;
+touch $BASE/resetCron;
+crontab $BASE/resetCron;
 
 #Clean Up
 chmod -R 777 /var/spool/cron
