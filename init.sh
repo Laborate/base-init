@@ -64,15 +64,15 @@ nrsysmond-config --set license_key=f3e8e80f017c8862e972bc5a1d69411fe57b1f95;
 
 #Configure Firewall
 apt-get -y install ufw
+ufw disable
 ufw default deny incoming
 ufw default allow outgoing
 ufw allow ssh
-ufw allow ssh
+ufw allow http
 ufw allow ftp
 if [ "$1" == "dev" ]; then
     ufw allow 3000:3010/tcp
 fi
-ufw disable
 ufw enable
 
 #Configuring System Preferences
