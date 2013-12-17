@@ -10,7 +10,7 @@ apt-get -y install libssl-dev pkg-config build-essential curl gcc g++ checkinsta
 apt-get -y install python-software-properties
 apt-get -y install software-properties-common
 
-sudo add-apt-repository ppa:chris-lea/node.js
+sudo add-apt-repository -y ppa:chris-lea/node.js
 sudo apt-get update
 
 #Install FTP
