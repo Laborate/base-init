@@ -42,9 +42,7 @@ npm install jsonlint -g
 if [ "$1" == "dev" ]; then
     cd ~/;
     git clone git@github.com:Laborate/dev-proxy.git;
-    cd dev-proxy; 
-    npm install;
-    node start.js
+    bash init.sh;
 fi
 
 #Install Java
