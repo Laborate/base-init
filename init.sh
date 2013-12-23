@@ -38,11 +38,14 @@ npm install csslint -g
 npm install jslint -g
 npm install jsonlint -g
 
-#Clean Up
-chmod -R 777 /var/spool/cron
-chmod 751 /home
-mkdir /home/archived_users/
-rm -rf $BASE
+#Install Dev-Proxy
+if [ "$1" == "dev" ]; then
+    cd ~/;
+    git clone git@github.com:Laborate/dev-proxy.git;
+    cd dev-proxy; 
+    npm install;
+    node start.js
+fi
 
 #Install Java
 if [ "$1" != "dev" ]; then
