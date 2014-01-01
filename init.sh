@@ -7,6 +7,7 @@ apt-get -y upgrade
 apt-get -y install curl
 apt-get -y install inotify-tools
 apt-get -y install libssl-dev pkg-config build-essential curl gcc g++ checkinstall make
+apt-get -y install ruby-dev libpq-dev
 apt-get -y install python-software-properties
 apt-get -y install software-properties-common
 
