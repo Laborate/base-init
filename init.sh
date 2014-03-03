@@ -1,6 +1,17 @@
 #Start Up
 BASE="$(cd "$(dirname "$0")"; pwd)"
 
+#MYSQL Root Info
+while [ -z "$mysql_password" ]; do
+    clear;
+    read -p "MYSQL Admin Password: " mysql_password;
+    read -p "Is this information correct [Y/n]: " mysql_correct;
+
+    if [ "$mysql_correct" == "n" ]; then
+        mysql_password=;
+    fi
+done
+
 #Update APT-GET
 apt-get -y update
 apt-get -y upgrade
@@ -21,6 +32,7 @@ cp $BASE/vsftpd.conf /etc/vsftpd.conf -fr
 #Install Mysql
 apt-get -y install mysql-server
 mysql_install_db
+mysql --user="root" --password="$mysql_password" --execute="set global max_connections=5000;"
 
 #Install Redis
 apt-get -y install redis-server
