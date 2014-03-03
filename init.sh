@@ -32,7 +32,7 @@ cp $BASE/vsftpd.conf /etc/vsftpd.conf -fr
 #Install Mysql
 apt-get -y install mysql-server
 mysql_install_db
-mysql --user="root" --password="$mysql_password" --execute="set global max_connections=5000;"
+mysql -u "root" -p "$mysql_password" -e "set global max_connections=5000;"
 
 #Install Redis
 apt-get -y install redis-server
