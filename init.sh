@@ -51,8 +51,11 @@ npm install csslint -g
 npm install jslint -g
 npm install jsonlint -g
 
-#Install Dev-Proxy
+#Install Dev-Proxy & Scout Realtime
 if [ "$1" == "dev" ]; then
+    gem install scout_realtime;
+    scout_realtime start;
+
     git clone git@github.com:Laborate/dev-proxy.git /root/dev-proxy;
     bash /root/dev-proxy/init.sh;
 fi
