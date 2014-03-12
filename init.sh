@@ -50,6 +50,7 @@ npm install forever -g
 npm install csslint -g
 npm install jslint -g
 npm install jsonlint -g
+npm install standby -g
 
 #Install Dev-Proxy & Scout Realtime
 if [ "$1" == "dev" ]; then
