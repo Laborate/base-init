@@ -45,19 +45,19 @@ PermitEmptyPasswords no
 
 # Change to yes to enable challenge-response passwords (beware issues with
 # some PAM modules and threads)
-ChallengeResponseAuthentication no
+ChallengeResponseAuthentication yes
 
 # Change to no to disable tunnelled clear text passwords
 PasswordAuthentication no
 
 # Kerberos options
-#KerberosAuthentication no
+KerberosAuthentication no
 #KerberosGetAFSToken no
 #KerberosOrLocalPasswd yes
 #KerberosTicketCleanup yes
 
 # GSSAPI options
-#GSSAPIAuthentication no
+GSSAPIAuthentication no
 #GSSAPICleanupCredentials yes
 
 X11Forwarding yes
@@ -65,7 +65,7 @@ X11DisplayOffset 10
 PrintMotd no
 PrintLastLog no
 TCPKeepAlive yes
-#UseLogin no
+UseLogin no
 
 #MaxStartups 10:30:60
 #Banner /etc/ssh/issue.net
