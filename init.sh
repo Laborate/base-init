@@ -58,23 +58,9 @@ if [ "$1" == "dev" ]; then
     bash /root/dev-proxy/init.sh;
 fi
 
-#Install Java
-if [ "$1" != "dev" ]; then
-    apt-get -y update
-    apt-get -y install openjdk-7-jre
-fi
-
 #Install Vim
 apt-get -y remove vim-tiny
 apt-get -y install vim
-
-#Install NewRelic
-echo deb http://apt.newrelic.com/debian/ newrelic non-free >> /etc/apt/sources.list.d/newrelic.list;
-wget -O- https://download.newrelic.com/548C16BF.gpg | apt-key add -;
-apt-get update;
-apt-get install -y newrelic-sysmond;
-nrsysmond-config --set license_key=f3e8e80f017c8862e972bc5a1d69411fe57b1f95;
-/etc/init.d/newrelic-sysmond start;
 
 #Configure Firewall
 apt-get -y install ufw
