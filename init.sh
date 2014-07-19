@@ -45,12 +45,9 @@ curl https://raw.github.com/creationix/nvm/master/install.sh | sh
 echo "[ -s $HOME/.nvm/nvm.sh ] && . $HOME/.nvm/nvm.sh" >> /etc/profile
 
 #Install Nodes Modules
-npm install express -g
-npm install forever -g
-npm install csslint -g
-npm install jslint -g
-npm install jsonlint -g
-npm install standby -g
+npm install -g express forever standby
+npm install -g csslint jslint jsonlint
+npm install -g coffee-script pm2 pm2-web
 
 #Install Dev-Proxy & Scout Realtime
 if [ "$1" == "dev" ]; then
